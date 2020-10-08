@@ -12,6 +12,7 @@ int main()
 {
     iamalpha;
     int t=1;
+   // scanf("%d",&t);
     while(t--) {
         solve();
     }
