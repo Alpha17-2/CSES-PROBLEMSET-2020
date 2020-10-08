@@ -20,28 +20,17 @@ int main()
     }
     return 0;
 }
- 
 void solve()
 {
- 
-        int n;
-        cin>>n;
-        map<int,int>mymap;
-        int val;
-        loop(0,n-1)
-        {
-            cin>>val;
-            mymap[val]=1;
-        }
-         loop(1,n+1)
-         {
-             if(mymap[i]==0)
-             {
-                 cout<<i;
-                 break;
-             }
-         }
- 
+    lli n,total_sum,present_sum=0,value;
+    cin>>n;
+    total_sum=(n*(n+1))/2;
+    loop(0,n-1)
+    {
+        cin>>value;
+        present_sum+=value;
+    }
+    cout<<total_sum-present_sum;
 }
  
  
