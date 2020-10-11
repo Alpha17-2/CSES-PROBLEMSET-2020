@@ -28,6 +28,7 @@ void solve()
   map<lli,int>mymap;
   lli val;
   cin>>val;
+
   mymap[val]=1;
   for (int i = 2; i <=n ; i++)
   {
