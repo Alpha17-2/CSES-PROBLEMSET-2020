@@ -20,28 +20,17 @@ int main()
 }
 void solve()
 {
-  int n;
-  cin>>n;
-  lli target;
-  cin>>target;
-  // Hashing Approach
-  map<lli,int>mymap;
-  lli val;
-  cin>>val;
-  mymap[val]=1;
-  for (int i = 2; i <=n ; i++)
-  {
-     cin>>val;
-     if(mymap.find(target-val)!=mymap.end())
-     {
-         cout<<i<<" "<<mymap[target-val];
-         return;
-     }
-     else
-     {
-         mymap[val]=i;
-     }
-     
-  }
-  cout<<"IMPOSSIBLE";
+    int n;
+    cin>>n;
+    vector<lli>a(n);
+    loop(0,n) cin>>a[i];
+    lli best=a[0];
+    lli current=a[0];
+    for (int i = 1; i < n; i++)
+    {
+        current=max(a[i],current+a[i]);
+        best=max(best,current);
+    }
+    cout<<best;
+    
 }
