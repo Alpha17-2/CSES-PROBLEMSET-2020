@@ -32,14 +32,8 @@ void solve()
         lli i=n,first_set=0,second_set=0, current_sum=0;
         while (i>0)
         {
-            if(current_sum+i==half)
-            {
-                mymap[i]=true;
-                first_set++;
-                break;
-
-            }
-            else if(current_sum+i>half)
+           
+            if(current_sum+i>=half)
             {
                 first_set++;
                 mymap[half-current_sum]=true;
