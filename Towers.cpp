@@ -29,12 +29,12 @@ void solve()
   tower.push_back(val);
   loop(1,n)
   {
-      cin>val;
+      cin>>val;
       int number_of_towers=tower.size();
       int pos=upper_bound(tower.begin(),tower.end(),val)-tower.begin();
-      if(pos==number_of_towers) // Not found
+      if(pos==number_of_towers)
       {
-        tower.push_back(val);
+          tower.push_back(val);
       }
       else
       {
