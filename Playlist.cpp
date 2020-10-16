@@ -30,6 +30,7 @@ void solve()
        if(mymap[val]==0) // Not Present
        {
            count++;
+           
            mymap[val]++;
        }
        else
