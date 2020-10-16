@@ -20,25 +20,53 @@ int main()
 }
 void solve()
 {
-    int min_count=1,min1,min2;
-    int n,val;
-    cin>>n;
-    int a[n];
-    cin>>a[0];
-    min1=a[0];
-    loop(1,n)
-    {
-        cin>>a[i];
-        if(a[i]<min1)
-        {
-            continue;
-        }
-        else
-        {
-            
-        }
-    }
-    cout<<min_count;
-
-
+  
+  int n;
+  cin>>n;
+  int val;
+  cin>>val;
+  vector<int>tower;
+  tower.push_back(val);
+  loop(1,n)
+  {
+      cin>val;
+      int number_of_towers=tower.size();
+      int pos=upper_bound(tower.begin(),tower.end(),val)-tower.begin();
+      if(pos==number_of_towers) // Not found
+      {
+        tower.push_back(val);
+      }
+      else
+      {
+          tower[pos]=val;
+      }
+  }
+  cout<<tower.size();
 }
+
+
+
+    
+// 3 8 2 1 5  , size = 1
+
+// 3 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
