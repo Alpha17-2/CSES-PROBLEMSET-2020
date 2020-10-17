@@ -22,25 +22,21 @@ void solve()
 {
    int n,val;
    cin>>n;
+   vector<int>list(n);
    map<int,int>mymap;
    int count=0,ans=INT_MIN;
-   loop(0,n)
+   loop(0,n) cin>>list[i]; 
+   int i=0,j=0;
+   int max_len=INT_MIN;
+   for(i=0; j<n ;i++)
    {
-       cin>>val;
-       if(mymap[val]==0) // Not Present
+       while (j<n && mymap[list[j]]<1)
        {
-           count++;
-           
-           mymap[val]++;
+           mymap[list[j]]++;
+           j++;
        }
-       else
-       {
-           ans=max(ans,count);
-           mymap.clear();
-           count=1;
-           mymap[val]++;
-       }
-   }
-    ans=max(ans,count);
-    cout<<ans;
+       max_len=max(max_len,(j-i));
+       mymap[list[i]]--;
+    }
+    cout<<max_len;
 }
