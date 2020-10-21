@@ -1,30 +1,40 @@
-/*  Author : Alpha_The_Coder
-    Created on 21/10/2020      */
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define iamalpha ios_base::sync_with_stdio(false);cin.tie(NULL);
-#define loop(a,n) for(int i=a;i<n;i++)
-#define nloop(a,n) for(int j=a;j<n;j++)
-#define lli long long int
-#define even(n) n%2==0?true:false
-void solve();
-
 int main()
 {
-    iamalpha;
-    int t=1;
-    scanf("%d",&t);
-    while(t--) {
-        solve();
-    }
-    return 0;
-}
-void solve()
-{  
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int a,b;
+        cin>>a>>b;
+        long long int  sum=0;
+        sum=a+b;
+        if(a==0 && b==0)
+            cout<<"YES\n";
+        else
+        {
+            sum=a+b;
+            if(sum%3==0&( a!=0 && b!=0 ))
+                {
+                    if(a>b )
+                    {  double q=(double)a/(double)b;
+                        if( ceil(q)<=2)
+                        cout<<"YES\n";
+                        else
+                         cout<<"\NO\n";
+                    }
+                    else
+                  {double q=(double)b/(double)a;
+                    if(ceil (q)<=2)
+                        cout<<"YES\n";
+                    else
+                        cout<<"\NO\n";
+                  }
+                }
+                else
+                    cout<<"NO\n";
  
- lli a,b;
- cin>>a>>b;
- lli sum=a+b;
- if( a<=b*2 && (sum)%3 == 0 && b<=a*2) cout<<"YES\n";
- else cout<<"NO\n";
+    }
+}
 }
