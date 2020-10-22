@@ -1,5 +1,5 @@
 /*  Author : Alpha_The_Coder
-    Created on 21/10/2020      */
+    Created on 22/10/2020      */
 #include <bits/stdc++.h>
 using namespace std;
 #define iamalpha ios_base::sync_with_stdio(false);cin.tie(NULL);
@@ -21,8 +21,14 @@ int main()
 void solve()
 {    
    int n; cin>>n;
-   vector<int>book(n);
-   loop(0,n) cin>>book[i];
+   vector<lli>book(n);
+   lli sum=0;
+   loop(0,n) {
+       cin>>book[i];
+       sum+=book[i];
+   }
    sort(book.begin(),book.end());
-   
+   lli sum_till_last=sum-book[n-1];
+   if(sum_till_last<book[n-1]) cout<<book[n-1]*2L;
+   else cout<<sum;
 }
