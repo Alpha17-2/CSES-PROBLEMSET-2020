@@ -20,6 +20,7 @@ int main()
 }
 void solve()
 {    
+    // MODIFIED
     string s;
     cin>>s;
     vector<char>even_char;
