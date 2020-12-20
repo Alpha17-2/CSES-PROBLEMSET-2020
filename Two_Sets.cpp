@@ -66,6 +66,32 @@ void solve()
     {
         cout<<"NO";
     }
-    
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+int a=10,b=15,sum=0;
+sum=a+b; // Calculates in O(1).
+cout<<sum;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
